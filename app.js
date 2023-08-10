@@ -16,7 +16,10 @@ app.set("view engine", "ejs");
 
 //Home
 app.get("/", (req, res) => {
-  res.send("hello world");
+    const locals = {
+        title : ''
+    }
+  res.render("index");
 });
 
 app.listen(port, () => {
