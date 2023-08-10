@@ -16,10 +16,11 @@ app.set("view engine", "ejs");
 
 //Home
 app.get("/", (req, res) => {
-    const locals = {
-        title : ''
-    }
-  res.render("index");
+  const locals = {
+    title: "Nodejs",
+    description: "Free NodeJS User Management System",
+  };
+  res.render("index", locals);
 });
 
 app.listen(port, () => {
