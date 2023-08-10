@@ -11,3 +11,14 @@ app.use(express.json());
 
 //static files
 app.use(express.static("public"));
+app.set("layout", "./layouts/main");
+app.set("view engine", "ejs");
+
+//Home
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
+
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`);
+});
