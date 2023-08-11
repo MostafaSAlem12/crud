@@ -14,6 +14,8 @@ app.use(express.static("public"));
 app.set("layout", "./layouts/main");
 app.set("view engine", "ejs");
 
+// test workspace
+const test= 1;
 //Home
 app.get("/", (req, res) => {
   const locals = {
